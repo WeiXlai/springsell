@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/sell?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 192.168.0.101
+    port: 6379
+
+
+logging:
+  pattern:
+    console: "%d - %msg%n"
+#  path: /var/log/tomcat/
+  file: /var/log/tomcat/sell.log
+  level:
+    com.imooc.LoggerTest: debug
+
+#wechat:
+#  mpAppId: wxfc7d78aee231e1af
+#  mpAppSecret: 6d1e41f664ffad607ff01869fa12bf3e
+#  openAppId: wxfc7d78aee231e1af
+#  openAppSecret: 6d1e41f664ffad607ff01869fa12bf3e
+#  mchId: 1483469312
+#  mchKey: C5245D70627C1F8E9964D494B0735025
+#  keyPath: /var/weixin_cert/h5.p12
+#  notifyUrl: http://sell.natapp4.cc/sell/pay/notify
+#  templateId:
+#    orderStatus: VtiaO68fIKR9s3HVPpg3uw0VpNbFx1glBpUwigwbjAg
+
+#projectUrl:
+#  wechatMpAuthorize: http://jessie.natapp1.cc
+#  wechatOpenAuthorize: http://jessie.natapp1.cc
+#  sell: http://jessie.natapp1.cc
+server:
+  servlet:
+    context-path: /sell
